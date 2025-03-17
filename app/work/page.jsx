@@ -38,6 +38,15 @@ const projects = [
     live: "https://ads.honeywell.com/login",
     github: "",
   },
+  {
+    num: "04",
+    category: "Software Development",
+    description: "This project-based learning initiative delivers a Credit Card Fraud Detection System for MCCS E-Commerce, utilizing machine learning and AI to identify fraudulent transactions in real-time while minimizing false positives. The solution includes fraud detection models, a real-time API, customized dashboards, and automated alerts to protect both the business and its customers.",
+    stack: [{ name: "vite/React"}, {name: "Node.js"}, {name: "Python"}, {name: "MongoDB"}, {name: "AWS"}],
+    image: "/assets/work/MCCS_aboutus.png",
+    live: "",
+    github: "",
+  },
 ];
 
 const Work = () => {

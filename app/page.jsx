@@ -19,7 +19,7 @@ const Home = () => {
                <p className="max-w-[600px] mx-auto xl:mx-0 mb-9 text-white/80">As a recent computer science graduate, I enjoy developing software and working with cloud technologies. I'm all about building great web apps, streamlining processes, and simplifying things for users. I'm very excited about AI, particularly computer vision and LLMs. I want to use these skills to generate new ideas and solve complex technological problems and I'm always eager to learn and can't wait to see where this field will take me next.</p>
                <div className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-6">
                   <Link 
-                    href="assets/resume/AkhileshBabuTumati_Resume.pdf"
+                    href="assets/resume/Resume_akhilesh_1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
