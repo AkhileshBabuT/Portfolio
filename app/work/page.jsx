@@ -45,7 +45,7 @@ const projects = [
     stack: [{ name: "vite/React"}, {name: "Node.js"}, {name: "Python"}, {name: "MongoDB"}, {name: "AWS"}],
     image: "/assets/work/MCCS_aboutus.png",
     live: "",
-    github: "",
+    github: "https://github.com/LokeshVarma-Konduru/MCCS-E-commerce-Fraud-Detection",
   },
 ];
 
