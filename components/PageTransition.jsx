@@ -10,7 +10,7 @@ const PageTransition = ({children}) => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setShowChildren(true);
-        }, 1400); // Duration of the animation plus some buffer
+        }, 200); // Reduced delay for smoother transitions
 
         return () => {
             clearTimeout(timeout);
@@ -25,7 +25,7 @@ const PageTransition = ({children}) => {
                     initial={{ opacity: 1}}
                     animate={{
                         opacity: 0,
-                        transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
+                        transition: { delay: 0, duration: 0.3, ease: "easeInOut" },
                     }}
                     className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
                 />

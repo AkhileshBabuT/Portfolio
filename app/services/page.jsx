@@ -66,7 +66,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col justify-between bg-black/20 rounded-lg p-6 h-[400px] group"
+              className="flex flex-col justify-between bg-black/20 rounded-lg p-6 min-h-[400px] group"
               variants={itemVariants}
             >
               <div>
@@ -82,7 +82,7 @@ const Services = () => {
                   </Link>
                 </div>
                 <h2 className="text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 mb-4">{service.title}</h2>
-                <p className="text-white/60 overflow-y-auto max-h-[180px]">{service.description}</p>
+                <p className="text-white/60">{service.description}</p>
               </div>
               <div className="border-b border-white/20 w-full mt-auto"></div>
             </motion.div>
