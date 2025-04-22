@@ -47,6 +47,20 @@ const projects = [
     live: "",
     github: "https://github.com/LokeshVarma-Konduru/MCCS-E-commerce-Fraud-Detection",
   },
+  {
+    num: "05",
+    category: "Software Development",
+    description: "Technovere – Blog Platform\nA modern, responsive blog application built using Next.js and styled with Tailwind CSS, powered by Sanity CMS for content management. The platform enables real-time content updates, SEO optimization, and dynamic routing. Deployed seamlessly on Vercel, it offers fast performance and a smooth editorial experience for blog publishing.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Sanity CMS" },
+      { name: "Vercel" }
+    ],
+    image: "/assets/work/technoverse.png", 
+    live: "https://technoverse-blog.vercel.app/",
+    github: "https://github.com/LordDracula02/Technoverse_blog"
+  },
 ];
 
 const Work = () => {
