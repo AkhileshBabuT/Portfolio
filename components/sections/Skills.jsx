@@ -1,20 +1,30 @@
 'use client';
+import { FaAws } from 'react-icons/fa';
+import { SiOpenai } from 'react-icons/si';
 import { skillGroups } from '@/components/data/skills';
 import { FramePanel } from '@/components/hud/FramePanel';
 import { SectionTag } from '@/components/hud/SectionTag';
 import { Reveal } from '@/components/hud/Reveal';
 
-function SkillNode({ name, slug, proficiency }) {
+// react-icons used for brands Simple Icons no longer ships (AWS, OpenAI).
+const iconComponents = { aws: FaAws, openai: SiOpenai };
+
+function SkillNode({ name, slug, iconKey, light, proficiency }) {
+  const IconComponent = iconKey ? iconComponents[iconKey] : null;
   return (
     <div className="group relative flex flex-col items-center gap-2">
       <div className="flex h-16 w-16 items-center justify-center border border-edge bg-panel-2 clip-hud-sm transition-all duration-200 group-hover:border-cyan group-hover:shadow-glow-cyan">
-        <img
-          src={`https://cdn.simpleicons.org/${slug}`}
-          alt={`${name} logo`}
-          width={28}
-          height={28}
-          loading="lazy"
-        />
+        {IconComponent ? (
+          <IconComponent size={28} className="text-text" aria-label={`${name} logo`} />
+        ) : (
+          <img
+            src={`https://cdn.simpleicons.org/${slug}${light ? '/e5e7eb' : ''}`}
+            alt={`${name} logo`}
+            width={28}
+            height={28}
+            loading="lazy"
+          />
+        )}
       </div>
       <span className="font-primary text-xs text-text-dim">{name}</span>
       <span

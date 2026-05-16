@@ -2,7 +2,7 @@ export const skillGroups = [
   {
     category: 'Languages',
     skills: [
-      { name: 'Java', slug: 'openjdk', proficiency: 'Expert' },
+      { name: 'Java', slug: 'openjdk', light: true, proficiency: 'Expert' },
       { name: 'JavaScript', slug: 'javascript', proficiency: 'Expert' },
       { name: 'TypeScript', slug: 'typescript', proficiency: 'Advanced' },
       { name: 'Python', slug: 'python', proficiency: 'Advanced' },
@@ -26,7 +26,7 @@ export const skillGroups = [
   {
     category: 'Cloud / DevOps',
     skills: [
-      { name: 'AWS', slug: 'amazonwebservices', proficiency: 'Advanced' },
+      { name: 'AWS', iconKey: 'aws', proficiency: 'Advanced' },
       { name: 'Docker', slug: 'docker', proficiency: 'Advanced' },
       { name: 'Kubernetes', slug: 'kubernetes', proficiency: 'Advanced' },
       { name: 'Jenkins', slug: 'jenkins', proficiency: 'Advanced' },
@@ -37,11 +37,11 @@ export const skillGroups = [
   {
     category: 'AI / ML',
     skills: [
-      { name: 'Claude', slug: 'anthropic', proficiency: 'Expert' },
+      { name: 'Claude', slug: 'anthropic', light: true, proficiency: 'Expert' },
       { name: 'Gemini API', slug: 'googlegemini', proficiency: 'Advanced' },
       { name: 'LangChain', slug: 'langchain', proficiency: 'Advanced' },
       { name: 'PyTorch', slug: 'pytorch', proficiency: 'Intermediate' },
-      { name: 'OpenAI', slug: 'openai', proficiency: 'Advanced' },
+      { name: 'OpenAI', iconKey: 'openai', proficiency: 'Advanced' },
       { name: 'Ollama', slug: 'ollama', proficiency: 'Intermediate' },
     ],
   },
