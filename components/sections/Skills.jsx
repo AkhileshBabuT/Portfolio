@@ -1,13 +1,13 @@
 'use client';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaJava } from 'react-icons/fa';
 import { SiOpenai } from 'react-icons/si';
 import { skillGroups } from '@/components/data/skills';
 import { FramePanel } from '@/components/hud/FramePanel';
 import { SectionTag } from '@/components/hud/SectionTag';
 import { Reveal } from '@/components/hud/Reveal';
 
-// react-icons used for brands Simple Icons no longer ships (AWS, OpenAI).
-const iconComponents = { aws: FaAws, openai: SiOpenai };
+// react-icons used for brands Simple Icons no longer ships (AWS, OpenAI, Java).
+const iconComponents = { aws: FaAws, openai: SiOpenai, java: FaJava };
 
 function SkillNode({ name, slug, iconKey, light, proficiency }) {
   const IconComponent = iconKey ? iconComponents[iconKey] : null;

@@ -2,7 +2,7 @@ export const skillGroups = [
   {
     category: 'Languages',
     skills: [
-      { name: 'Java', slug: 'openjdk', light: true, proficiency: 'Expert' },
+      { name: 'Java', iconKey: 'java', proficiency: 'Expert' },
       { name: 'JavaScript', slug: 'javascript', proficiency: 'Expert' },
       { name: 'TypeScript', slug: 'typescript', proficiency: 'Advanced' },
       { name: 'Python', slug: 'python', proficiency: 'Advanced' },
