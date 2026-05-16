@@ -1,24 +1,20 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { t } from '@/lib/motion';
 
 const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'education', 'connect'];
 
 export function SectionNav() {
   const [active, setActive] = useState('hero');
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); }); },
       { rootMargin: '-45% 0px -45% 0px' }
     );
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    sections.forEach((id) => { const el = document.getElementById(id); if (el) observer.observe(el); });
     return () => observer.disconnect();
   }, []);
 
@@ -35,13 +31,20 @@ export function SectionNav() {
           aria-current={active === id ? 'true' : undefined}
           className="group relative flex items-center justify-end"
         >
-          <span
-            className={`h-2.5 w-2.5 rotate-45 border transition-all duration-300 ${
-              active === id
-                ? 'border-cyan bg-cyan shadow-glow-cyan'
-                : 'border-text-dim bg-transparent group-hover:border-cyan'
-            }`}
-          />
+          {/* Diamond dot — border transitions via CSS, fill uses layoutId shared element */}
+          <span className={`relative h-2.5 w-2.5 rotate-45 border transition-colors duration-[240ms] ${
+            active === id ? 'border-cyan' : 'border-text-dim group-hover:border-cyan'
+          }`}>
+            {active === id && (
+              reduce
+                ? <span className="absolute inset-0 bg-cyan shadow-glow-cyan" />
+                : <motion.span
+                    layoutId="nav-dot"
+                    className="absolute inset-0 bg-cyan shadow-glow-cyan"
+                    transition={t.panel}
+                  />
+            )}
+          </span>
         </a>
       ))}
     </nav>

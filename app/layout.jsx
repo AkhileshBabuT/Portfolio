@@ -2,6 +2,8 @@ import { JetBrains_Mono, Orbitron } from 'next/font/google';
 import './globals.css';
 import { GridBackground } from '@/components/hud/GridBackground';
 import { ScanlineOverlay } from '@/components/hud/ScanlineOverlay';
+import { BootSequence } from '@/components/hud/BootSequence';
+import { AmbientGlitch } from '@/components/hud/AmbientGlitch';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SectionNav } from '@/components/layout/SectionNav';
@@ -39,6 +41,8 @@ export default function RootLayout({ children }) {
       <body className="font-primary bg-void text-text antialiased">
         <GridBackground />
         <ScanlineOverlay />
+        <BootSequence />
+        <AmbientGlitch />
         <Header />
         <SectionNav />
         <main className="relative z-10">{children}</main>

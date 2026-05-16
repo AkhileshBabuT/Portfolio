@@ -1,5 +1,6 @@
 'use client';
 import { motion, useReducedMotion } from 'framer-motion';
+import { t } from '@/lib/motion';
 
 // In-game action button. Renders <a> when href given, else <button>.
 export function NeonButton({
@@ -16,14 +17,20 @@ export function NeonButton({
     color === 'magenta'
       ? 'border-magenta/50 text-magenta hover:bg-magenta/10 hover:shadow-glow-magenta'
       : 'border-cyan/50 text-cyan hover:bg-cyan/10 hover:shadow-glow-cyan';
-  const cls = `group inline-flex items-center gap-2.5 border ${palette} clip-hud-sm bg-panel px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.18em] transition-colors duration-200 ${className}`;
+  // duration-[240ms] matches t.hover duration (0.24s) for CSS color transition
+  const cls = `group inline-flex items-center gap-2.5 border ${palette} clip-hud-sm bg-panel px-5 py-3 font-display text-xs font-semibold uppercase tracking-[0.18em] transition-colors duration-[240ms] ${className}`;
+  const iconCls = reduce
+    ? 'text-base transition-none'
+    : 'text-base transition-transform duration-200 group-hover:scale-110';
   const inner = (
     <>
-      {Icon && <Icon className="text-base transition-transform duration-200 group-hover:scale-110" />}
+      {Icon && <Icon className={iconCls} />}
       <span>{children}</span>
     </>
   );
-  const motionProps = reduce ? {} : { whileHover: { y: -2 }, whileTap: { y: 0 } };
+  const motionProps = reduce
+    ? {}
+    : { whileHover: { y: -2 }, whileTap: { scale: 0.95 }, transition: t.hover };
   if (href) {
     return (
       <motion.a

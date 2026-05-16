@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { profile } from '@/components/data/profile';
+import { t } from '@/lib/motion';
 
 const navItems = [
   { id: 'hero', label: 'HOME' },
@@ -24,7 +25,7 @@ export function Header() {
   return (
     <motion.header
       animate={{ y: hidden ? '-100%' : '0%' }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      transition={t.header}
       className="fixed inset-x-0 top-0 z-50 border-b border-edge bg-void/85 backdrop-blur-md"
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
