@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 
 export function AmbientGlitch() {
@@ -7,25 +7,23 @@ export function AmbientGlitch() {
   const [glitching, setGlitching] = useState(false);
   const glitchY = useRef(40);
 
-  const triggerGlitch = useCallback(() => {
-    glitchY.current = 20 + Math.random() * 60;
-    setGlitching(true);
-    setTimeout(() => setGlitching(false), 180);
-  }, []);
-
   useEffect(() => {
     if (reduce) return;
+    let timer;
     const schedule = () => {
-      const delay = 8000 + Math.random() * 7000;
-      return setTimeout(() => { triggerGlitch(); }, delay);
+      const delay = 8000 + Math.random() * 7000; // 8–15s between glitches
+      timer = setTimeout(() => {
+        glitchY.current = 20 + Math.random() * 60;
+        setGlitching(true);
+        setTimeout(() => {
+          setGlitching(false);
+          schedule(); // reschedule only after glitch completes
+        }, 180);
+      }, delay);
     };
-    let timer = schedule();
-    const interval = setInterval(() => {
-      clearTimeout(timer);
-      timer = schedule();
-    }, 16000);
-    return () => { clearTimeout(timer); clearInterval(interval); };
-  }, [reduce, triggerGlitch]);
+    schedule();
+    return () => clearTimeout(timer);
+  }, [reduce]);
 
   if (reduce) return null;
 

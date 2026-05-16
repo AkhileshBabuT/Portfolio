@@ -15,6 +15,7 @@ function TechChip({ t }) {
       whileHover={reduce ? {} : { y: -3 }}
       transition={{ duration: 0.18, ease: 'easeOut' }}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`https://cdn.simpleicons.org/${t.slug}`}
         alt=""

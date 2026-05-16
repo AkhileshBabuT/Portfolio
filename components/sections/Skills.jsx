@@ -20,6 +20,7 @@ function SkillNode({ name, slug, iconKey, light, proficiency }) {
         whileHover={reduce ? {} : { scale: 1.12 }}
         transition={{ duration: 0.18, ease: 'easeOut' }}
       >
+        {/* eslint-disable @next/next/no-img-element */}
         {IconComponent ? (
           <IconComponent size={28} className="text-text" aria-label={`${name} logo`} />
         ) : (
@@ -31,6 +32,7 @@ function SkillNode({ name, slug, iconKey, light, proficiency }) {
             loading="lazy"
           />
         )}
+        {/* eslint-enable @next/next/no-img-element */}
       </motion.div>
       <span className="font-primary text-xs text-text-dim">{name}</span>
       <span

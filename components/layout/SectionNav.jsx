@@ -32,7 +32,7 @@ export function SectionNav() {
           className="group relative flex items-center justify-end"
         >
           {/* Diamond dot — border transitions via CSS, fill uses layoutId shared element */}
-          <span className={`relative h-2.5 w-2.5 rotate-45 border transition-colors duration-[240ms] ${
+          <span className={`relative h-2.5 w-2.5 rotate-45 border transition-colors duration-200 ${
             active === id ? 'border-cyan' : 'border-text-dim group-hover:border-cyan'
           }`}>
             {active === id && (
