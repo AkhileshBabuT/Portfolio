@@ -46,7 +46,7 @@ export default function Hero() {
                 animate={reduce ? {} : { opacity: [1, 0.55, 1] }}
                 transition={reduce ? {} : { duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
-                {'// PLAYER_CARD — 00'}
+                {'// PLAYER_CARD — LordJordan02'}
               </motion.p>
             </RevealItem>
 

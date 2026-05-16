@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Akhilesh Babu Tumati',
   title: 'Full-Stack & AI Engineer',
-  location: 'Blacksburg, VA',
+  location: 'Alexandria, VA',
   taglines: [
     'Shipping from infra to UI.',
     'Enterprise systems. AI agents. Measurable outcomes.',
