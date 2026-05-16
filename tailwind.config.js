@@ -1,54 +1,55 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = 
-{
-  darkMode: ["class"],
+module.exports = {
+  darkMode: ['class'],
   content: [
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "15px",
-    },
-    screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '960px',
-        xl: '1200px',
-    },
-     fontFamily: {
-      primary: "var(--font-jetbrainsMono)"
+    container: { center: true, padding: '15px' },
+    screens: { sm: '640px', md: '768px', lg: '960px', xl: '1200px' },
+    fontFamily: {
+      primary: 'var(--font-jetbrainsMono)',
+      display: 'var(--font-orbitron)',
     },
     extend: {
       colors: {
-        primary: "#1c1c22",
-        accent: {
-          DEFAULT: '#00ff99',
-          hover: "#00e187",
-        },
+        void: '#0a0a0f',
+        panel: '#12121a',
+        'panel-2': '#181824',
+        edge: '#1f1f2e',
+        cyan: { DEFAULT: '#00e5ff', dim: '#0891a8' },
+        magenta: { DEFAULT: '#ff2d95', dim: '#a81e63' },
+        text: { DEFAULT: '#e5e7eb', dim: '#8a8a9a' },
+        primary: '#1c1c22',
+        accent: { DEFAULT: '#00ff99', hover: '#00e187' },
       },
-
+      boxShadow: {
+        'glow-cyan': '0 0 12px rgba(0,229,255,0.45)',
+        'glow-magenta': '0 0 12px rgba(255,45,149,0.45)',
+        'glow-cyan-lg': '0 0 28px rgba(0,229,255,0.35)',
+      },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        'grid-drift': { from: { backgroundPosition: '0 0' }, to: { backgroundPosition: '0 -60px' } },
+        flicker: {
+          '0%,100%': { opacity: '1' },
+          '92%': { opacity: '1' },
+          '93%': { opacity: '0.4' },
+          '94%': { opacity: '1' },
+          '97%': { opacity: '0.7' },
+          '98%': { opacity: '1' },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+        'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+        'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        'grid-drift': 'grid-drift 8s linear infinite',
+        flicker: 'flicker 6s linear infinite',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require('tailwindcss-animate')],
 };
-
-  
