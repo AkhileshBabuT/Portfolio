@@ -42,10 +42,17 @@ module.exports = {
         },
         'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
         'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
+        'scan-sweep': {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '8%': { opacity: '0.5' },
+          '92%': { opacity: '0.5' },
+          '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
       },
       animation: {
         'grid-drift': 'grid-drift 8s linear infinite',
         flicker: 'flicker 6s linear infinite',
+        'scan-sweep': 'scan-sweep 7s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
