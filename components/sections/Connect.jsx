@@ -1,9 +1,9 @@
 'use client';
 import { FiLinkedin, FiFileText, FiMail, FiBriefcase } from 'react-icons/fi';
 import { profile } from '@/components/data/profile';
-import { FramePanel } from '@/components/hud/FramePanel';
+import { HoverPanel } from '@/components/hud/HoverPanel';
 import { SectionTag } from '@/components/hud/SectionTag';
-import { Reveal } from '@/components/hud/Reveal';
+import { Reveal, RevealGroup, RevealItem } from '@/components/hud/Reveal';
 import { NeonButton } from '@/components/hud/NeonButton';
 
 export default function Connect() {
@@ -17,26 +17,39 @@ export default function Connect() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <FramePanel color="magenta" className="p-8 text-center">
+          <HoverPanel color="magenta" className="p-8 text-center">
             <p className="font-primary text-base leading-relaxed text-text-dim">
               Open to full-time roles and select collaborations. Initiate contact through any
               channel below.
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <NeonButton href={links.linkedin || undefined} icon={FiLinkedin} external>
-                LinkedIn
-              </NeonButton>
-              <NeonButton href={links.resumePdf || undefined} icon={FiFileText} external>
-                Resume
-              </NeonButton>
-              <NeonButton href={links.handshake || undefined} icon={FiBriefcase} color="magenta" external>
-                Handshake
-              </NeonButton>
-              <NeonButton href={`mailto:${contact.email}`} icon={FiMail} color="magenta">
-                Email
-              </NeonButton>
-            </div>
-          </FramePanel>
+            <RevealGroup
+              as="div"
+              className="mt-7 flex flex-wrap justify-center gap-4"
+              stagger={0.1}
+              delayChildren={0.1}
+            >
+              <RevealItem scale>
+                <NeonButton href={links.linkedin || undefined} icon={FiLinkedin} external>
+                  LinkedIn
+                </NeonButton>
+              </RevealItem>
+              <RevealItem scale>
+                <NeonButton href={links.resumePdf || undefined} icon={FiFileText} external>
+                  Resume
+                </NeonButton>
+              </RevealItem>
+              <RevealItem scale>
+                <NeonButton href={links.handshake || undefined} icon={FiBriefcase} color="magenta" external>
+                  Handshake
+                </NeonButton>
+              </RevealItem>
+              <RevealItem scale>
+                <NeonButton href={`mailto:${contact.email}`} icon={FiMail} color="magenta">
+                  Email
+                </NeonButton>
+              </RevealItem>
+            </RevealGroup>
+          </HoverPanel>
         </Reveal>
       </div>
     </section>

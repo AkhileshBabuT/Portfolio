@@ -1,9 +1,23 @@
 'use client';
+import { motion, useReducedMotion } from 'framer-motion';
 import { FiAward } from 'react-icons/fi';
 import { education } from '@/components/data/education';
-import { FramePanel } from '@/components/hud/FramePanel';
+import { HoverPanel } from '@/components/hud/HoverPanel';
 import { SectionTag } from '@/components/hud/SectionTag';
-import { Reveal } from '@/components/hud/Reveal';
+import { Reveal, RevealGroup, RevealItem } from '@/components/hud/Reveal';
+
+function AwardIcon() {
+  const reduce = useReducedMotion();
+  return (
+    <motion.div
+      className="inline-flex"
+      whileHover={reduce ? {} : { rotate: -8, scale: 1.1 }}
+      transition={{ duration: 0.2, ease: 'easeOut' }}
+    >
+      <FiAward className="text-2xl text-cyan" />
+    </motion.div>
+  );
+}
 
 export default function Education() {
   return (
@@ -14,11 +28,16 @@ export default function Education() {
             <SectionTag number="05" label="Education" />
           </div>
         </Reveal>
-        <div className="grid gap-6 md:grid-cols-2">
-          {education.map((edu, i) => (
-            <Reveal key={edu.school} delay={i * 0.1}>
-              <FramePanel className="h-full p-6">
-                <FiAward className="text-2xl text-cyan" />
+        <RevealGroup
+          as="div"
+          className="grid gap-6 md:grid-cols-2"
+          stagger={0.12}
+          delayChildren={0.05}
+        >
+          {education.map((edu) => (
+            <RevealItem key={edu.school} scale>
+              <HoverPanel color="cyan" className="h-full p-6">
+                <AwardIcon />
                 <h3 className="mt-3 font-display text-base font-bold uppercase tracking-[0.12em] text-text">
                   {edu.school}
                 </h3>
@@ -29,10 +48,10 @@ export default function Education() {
                   </span>
                   <span className="font-primary text-xs text-text-dim">{edu.dates}</span>
                 </div>
-              </FramePanel>
-            </Reveal>
+              </HoverPanel>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );
