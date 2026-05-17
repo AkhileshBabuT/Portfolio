@@ -1,60 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
-@layer base{
-    body {
-        @apply font-primary bg-black text-white leading-loose;
-    }
-    .h1 {
-        @apply text-[42px] xl:text-[60px] leading-[1.1] font-semibold;
-    }
-    .h2 {
-        @apply text-[32px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
-    
-    .text-oceanus{
-          color: #00ffb7;
-    }
 
-    .text-outline {
-        -webkit-text-stroke: 1px #ffffff;
-        text-stroke: 1px #ffffff;
-      }
-      
-      .text-outline-hover {
-        -webkit-text-stroke: 1px #00ff99;
-        text-stroke: 1px #00ff99;
-      }
-      
-      /* Ensure the text is transparent to show the outline */
-      .text-outline,
-      .text-outline-hover {
-        color: transparent;
-        transition: all 0.3s ease;
-      }
-      
-      /* Add a fallback for browsers that don't support -webkit-text-stroke */
-      @supports not (-webkit-text-stroke: 1px #ffffff) {
-        .text-outline,
-        .text-outline-hover {
-          text-shadow: 
-            -1px -1px 0 #ffffff,
-            1px -1px 0 #ffffff,
-            -1px 1px 0 #ffffff,
-            1px 1px 0 #ffffff;
-        }
-        
-        .text-outline-hover {
-          text-shadow: 
-            -1px -1px 0 #00ff99,
-            1px -1px 0 #00ff99,
-            -1px 1px 0 #00ff99,
-            1px 1px 0 #00ff99;
-        }
-      }
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #0a0a0f;
+    color: #e5e7eb;
+  }
+  ::selection { background: #00e5ff; color: #0a0a0f; }
+  :focus-visible {
+    outline: 2px solid #00e5ff;
+    outline-offset: 2px;
+  }
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .clip-hud {
+    clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  }
+  .clip-hud-sm {
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  }
+  .text-glow-cyan { text-shadow: 0 0 10px rgba(0,229,255,0.6); }
+  .text-glow-magenta { text-shadow: 0 0 10px rgba(255,45,149,0.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
