@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { t } from '@/lib/motion';
 
-const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'education', 'connect'];
+const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'publications', 'education', 'connect'];
 
 export function SectionNav() {
   const [active, setActive] = useState('hero');

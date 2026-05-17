@@ -10,6 +10,7 @@ const navItems = [
   { id: 'skills', label: 'ARSENAL' },
   { id: 'experience', label: 'MISSIONS' },
   { id: 'projects', label: 'PROJECTS' },
+  { id: 'publications', label: 'RESEARCH' },
   { id: 'connect', label: 'CONNECT' },
 ];
 

@@ -13,7 +13,7 @@ export default function Connect() {
       <div className="container mx-auto max-w-3xl">
         <Reveal>
           <div id="connect-heading">
-            <SectionTag number="06" label="Connect" color="magenta" />
+            <SectionTag number="07" label="Connect" color="magenta" />
           </div>
         </Reveal>
         <Reveal delay={0.1}>

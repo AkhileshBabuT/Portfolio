@@ -25,7 +25,7 @@ export default function Education() {
       <div className="container mx-auto max-w-4xl">
         <Reveal>
           <div id="education-heading">
-            <SectionTag number="05" label="Education" />
+            <SectionTag number="06" label="Education" />
           </div>
         </Reveal>
         <RevealGroup
