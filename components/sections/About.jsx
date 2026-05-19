@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { profile } from '@/components/data/profile';
 import { HoverPanel } from '@/components/hud/HoverPanel';
 import { SectionTag } from '@/components/hud/SectionTag';
@@ -28,13 +27,13 @@ export default function About() {
                     <span aria-hidden="true" className="pointer-events-none absolute -top-1.5 -right-1.5 h-4 w-4 border-t-2 border-r-2 border-cyan" />
                     <span aria-hidden="true" className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-4 w-4 border-b-2 border-l-2 border-cyan" />
                     <span aria-hidden="true" className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-4 w-4 border-b-2 border-r-2 border-cyan" />
-                    <Image
-                      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Akhil_picture.png`}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/Akhil_picture.png`}
                       alt="Akhilesh Babu Tumati"
                       width={208}
                       height={260}
                       className="w-full object-cover clip-hud grayscale brightness-90 contrast-110"
-                      priority
                     />
                     <div className="mt-2 text-center font-display text-[9px] tracking-[0.3em] text-cyan/70">
                       IDENT // VERIFIED
