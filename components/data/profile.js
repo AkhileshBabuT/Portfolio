@@ -27,6 +27,6 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/akhilesh-babu-tumati', // TODO: confirm LinkedIn URL
     github: 'https://github.com/AkhileshBabuT',
     handshake: '', // TODO: add Handshake profile URL
-    resumePdf: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/assets/resume/Akhilesh_Babu_Resume.pdf`,
+    resumePdf: '/assets/resume/Akhilesh_Babu_Resume.pdf',
   },
 };
