@@ -24,9 +24,9 @@ export const profile = {
   ],
   contact: { email: 'akhileshbabut24@vt.edu' },
   links: {
-    linkedin: 'https://linkedin.com/in/akhilesh-babu-tumati', // TODO: confirm LinkedIn URL
+    linkedin: 'https://www.linkedin.com/in/akhilesh-babu-tumati',
     github: 'https://github.com/AkhileshBabuT',
-    handshake: '', // TODO: add Handshake profile URL
+    handshake: 'https://vt.joinhandshake.com/profiles/akhileshbabu',
     resumePdf: `${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/assets/resume/Akhilesh_Babu_Resume.pdf`,
   },
 };
