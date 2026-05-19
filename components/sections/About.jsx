@@ -29,7 +29,7 @@ export default function About() {
                     <span aria-hidden="true" className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-4 w-4 border-b-2 border-l-2 border-cyan" />
                     <span aria-hidden="true" className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-4 w-4 border-b-2 border-r-2 border-cyan" />
                     <Image
-                      src="/Akhil_picture.png"
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Akhil_picture.png`}
                       alt="Akhilesh Babu Tumati"
                       width={208}
                       height={260}
