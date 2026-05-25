@@ -27,6 +27,6 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/akhilesh-babu-tumati',
     github: 'https://github.com/AkhileshBabuT',
     handshake: 'https://vt.joinhandshake.com/profiles/akhileshbabu',
-    resumePdf: `${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/assets/resume/AkhileshBabu_Resume.pdf`,
+    resumePdf: `${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/assets/resume/Akhil_resume.pdf`,
   },
 };

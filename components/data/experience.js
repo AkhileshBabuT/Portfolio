@@ -32,11 +32,12 @@ export const experience = [
       'Drove 20+ monthly zero-downtime releases for high-traffic logistics microservices through Jenkins CI/CD into OpenShift/Kubernetes, cutting deployment errors by 30% across UPS\'s global delivery network.',
       'Kept distributed Java services at 99.99% availability by wiring Grafana and Dynatrace alert rules to Couchbase NoSQL cluster health — catching and resolving P1 incidents before they hit customers.',
       'Owned schema design and query optimization for production Couchbase databases handling 10M+ daily address lookups, shaving average query latency by 35%.',
+      'Executed global data migrations across APAC/EU/US using Red Hat AMQ Streams (Kafka) and MirrorMaker 2, ensuring synchronized production data and automated backups to Azure for disaster recovery.',
     ],
   },
   {
     company: 'Honeywell',
-    role: 'Software Developer Intern',
+    role: 'Software Developer Engineer',
     dates: 'Jan 2023 – Jul 2023',
     location: 'Hyderabad, India',
     bullets: [
