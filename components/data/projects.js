@@ -1,45 +1,44 @@
 export const projects = [
   {
-    title: 'MCCS Fraud Detection Platform',
-    subtitle: 'VT Integrated Product Design — MCCS Sponsor',
-    description:
-      'Real-time inference pipeline in Python using XGBoost trained on GAN-augmented synthetic fraud samples, achieving sub-second risk classification across 15,000+ daily transactions. Includes a RAG-powered Gemini chat assistant over fraud cases and React/Tremor dashboards.',
-    tech: [
-      { name: 'Python', slug: 'python' },
-      { name: 'XGBoost', slug: 'scikitlearn' },
-      { name: 'Gemini', slug: 'googlegemini' },
-      { name: 'MongoDB', slug: 'mongodb' },
-      { name: 'React', slug: 'react' },
+    title: 'MCCS Real-Time Transaction Risk Platform',
+    subtitle: 'Fraud intelligence / sponsored project',
+    dates: 'Sep 2024 – May 2025',
+    code: '01 / RISK ENGINE',
+    metric: '15,000+',
+    metricLabel: 'daily transactions',
+    description: 'A high-throughput Python risk analysis platform for transaction monitoring and compliance audits.',
+    bullets: [
+      'Delivered sub-second decision latency across 15,000+ daily financial transactions.',
+      'Automated 150+ monthly compliance audit packages with a Gemini RAG pipeline, saving 12 hours of manual preparation each week.',
+      'Built real-time React and Node.js dashboards to track model drift, latency spikes, and system anomalies.',
     ],
-    github: '', // TODO: add github url
-    demo: '', // TODO: add live demo url
+    tech: ['Python', 'AWS', 'MongoDB Atlas', 'LangChain', 'React'],
   },
   {
-    title: 'Evol Jewels — Virtual Try-On Kiosk',
-    subtitle: 'AI retail kiosk · Fountane Hackathon (2nd place)',
-    description:
-      'High-impact retail kiosk built with Next.js 15 and TypeScript, integrating fal.ai generative workflows to improve virtual try-on image quality by 30%. Catalog managed via Prisma ORM and PostgreSQL with QR-code lead capture.',
-    tech: [
-      { name: 'Next.js', slug: 'nextdotjs' },
-      { name: 'TypeScript', slug: 'typescript' },
-      { name: 'Prisma', slug: 'prisma' },
-      { name: 'PostgreSQL', slug: 'postgresql' },
+    title: 'Nazeer and Nazeers Cloud E-Commerce Platform',
+    subtitle: 'Full stack / DevOps',
+    code: '02 / COMMERCE',
+    metric: '23',
+    metricLabel: 'versioned SQL migrations',
+    description: 'A cloud commerce platform built around reliable data releases, inventory workflows, and access control.',
+    bullets: [
+      'Built database CI/CD and migration tracking across 23 versioned SQL migrations using PostgreSQL and Supabase.',
+      'Enforced schema integrity, immutable ledgers, and row-level security policies.',
+      'Automated containerized deployments and transactional email alerts for real-time inventory reservations.',
     ],
-    github: '', // TODO: add github url
-    demo: '', // TODO: add live demo url
+    tech: ['PostgreSQL', 'Supabase', 'Next.js', 'TypeScript'],
   },
   {
-    title: 'CS Ethics Archive',
-    subtitle: 'Virginia Tech — academic repository',
-    description:
-      'Scalable academic repository with sub-second search across 10+ domains, built on Next.js and Express with serverless AWS infrastructure and MongoDB Atlas. Hardened with MFA, 5-tier RBAC, and JWT token blacklisting.',
-    tech: [
-      { name: 'Next.js', slug: 'nextdotjs' },
-      { name: 'Express', slug: 'express' },
-      { name: 'AWS', slug: 'amazonwebservices' },
-      { name: 'MongoDB', slug: 'mongodb' },
+    title: 'Evol Jewels Computer Vision Kiosk',
+    subtitle: 'Hackathon / 2nd place',
+    code: '03 / VISION',
+    metric: '2nd',
+    metricLabel: 'hackathon place',
+    description: 'An interactive edge-device retail kiosk that brings AI-powered virtual try-on into the shopping experience.',
+    bullets: [
+      'Built the kiosk with Next.js and Prisma ORM.',
+      'Integrated GPU-accelerated cloud inference through fal.ai, with automated fallback pipelines.',
     ],
-    github: '', // TODO: add github url
-    demo: '', // TODO: add live demo url
+    tech: ['Docker', 'Next.js', 'PostgreSQL', 'Prisma', 'fal.ai'],
   },
 ];

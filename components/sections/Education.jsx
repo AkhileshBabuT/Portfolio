@@ -42,7 +42,8 @@ export default function Education() {
                   {edu.school}
                 </h3>
                 <p className="mt-1 font-primary text-sm text-text-dim">{edu.degree}</p>
-                <div className="mt-3 flex items-center justify-between border-t border-edge pt-3">
+                <p className="mt-2 font-primary text-xs text-cyan/70">{edu.location}</p>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-edge pt-3">
                   <span className="font-display text-xs tracking-[0.15em] text-magenta">
                     {edu.detail}
                   </span>

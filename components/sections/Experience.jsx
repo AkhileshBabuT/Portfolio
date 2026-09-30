@@ -35,6 +35,13 @@ function QuestCard({ job, index }) {
             <FiMapPin className="text-cyan" /> {job.location}
           </span>
         </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {job.highlights.map((highlight) => (
+            <span key={highlight} className="clip-hud-sm border border-cyan/30 bg-cyan/5 px-3 py-1 font-display text-[10px] uppercase tracking-[0.1em] text-cyan">
+              {highlight}
+            </span>
+          ))}
+        </div>
         <RevealGroup as="ul" stagger={0.07} delayChildren={0.15} className="mt-4 space-y-2">
           {job.bullets.map((bullet, i) => (
             <RevealItem key={i} as="li" from="left" className="flex gap-2.5 font-primary text-sm leading-relaxed text-text">

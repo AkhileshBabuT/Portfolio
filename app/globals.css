@@ -26,6 +26,11 @@
   }
   .text-glow-cyan { text-shadow: 0 0 10px rgba(0,229,255,0.6); }
   .text-glow-magenta { text-shadow: 0 0 10px rgba(255,45,149,0.6); }
+  .project-grid {
+    background-image: linear-gradient(rgba(0,229,255,0.13) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.13) 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

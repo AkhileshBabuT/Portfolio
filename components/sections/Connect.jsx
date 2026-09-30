@@ -1,5 +1,5 @@
 'use client';
-import { FiLinkedin, FiFileText, FiMail, FiBriefcase } from 'react-icons/fi';
+import { FiLinkedin, FiGithub, FiFileText, FiMail, FiPhone, FiBriefcase } from 'react-icons/fi';
 import { profile } from '@/components/data/profile';
 import { HoverPanel } from '@/components/hud/HoverPanel';
 import { SectionTag } from '@/components/hud/SectionTag';
@@ -34,6 +34,11 @@ export default function Connect() {
                 </NeonButton>
               </RevealItem>
               <RevealItem scale>
+                <NeonButton href={links.github} icon={FiGithub} external>
+                  GitHub
+                </NeonButton>
+              </RevealItem>
+              <RevealItem scale>
                 <NeonButton href={links.resumePdf || undefined} icon={FiFileText} external>
                   Resume
                 </NeonButton>
@@ -46,6 +51,11 @@ export default function Connect() {
               <RevealItem scale>
                 <NeonButton href={`mailto:${contact.email}`} icon={FiMail} color="magenta">
                   Email
+                </NeonButton>
+              </RevealItem>
+              <RevealItem scale>
+                <NeonButton href={`tel:+1${contact.phone}`} icon={FiPhone} color="magenta">
+                  Call
                 </NeonButton>
               </RevealItem>
             </RevealGroup>

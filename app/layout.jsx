@@ -22,13 +22,13 @@ const orbitron = Orbitron({
 
 export const metadata = {
   metadataBase: new URL('https://akhilesh-portfolio.vercel.app'),
-  title: 'Akhilesh Babu Tumati — Full-Stack & AI Engineer',
+  title: 'Akhilesh Babu Tumati — Cloud / Full Stack Engineer',
   description:
-    'Gamified sci-fi portfolio of Akhilesh Babu Tumati — full-stack and AI engineer building enterprise systems, AI agents, and production-grade web apps.',
-  keywords: ['Akhilesh Babu Tumati', 'Full-Stack Engineer', 'AI Engineer', 'React', 'Next.js'],
+    'Portfolio of Akhilesh Babu Tumati, a cloud and full stack engineer building serverless systems, reliable release pipelines, and AI-powered products.',
+  keywords: ['Akhilesh Babu Tumati', 'Cloud Engineer', 'Full Stack Engineer', 'AWS', 'DevOps', 'Next.js'],
   openGraph: {
-    title: 'Akhilesh Babu Tumati — Full-Stack & AI Engineer',
-    description: 'Gamified sci-fi portfolio — full-stack and AI engineering.',
+    title: 'Akhilesh Babu Tumati — Cloud / Full Stack Engineer',
+    description: 'Cloud systems, full stack engineering, DevOps, and AI-powered projects.',
     type: 'website',
   },
   twitter: { card: 'summary_large_image' },

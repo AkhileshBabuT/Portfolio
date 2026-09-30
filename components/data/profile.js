@@ -1,13 +1,13 @@
 export const profile = {
   name: 'Akhilesh Babu Tumati',
-  title: 'Full-Stack & AI Engineer',
+  title: 'Cloud / Full Stack Engineer',
   location: 'Alexandria, VA',
   taglines: [
-    'Shipping from infra to UI.',
-    'Enterprise systems. AI agents. Measurable outcomes.',
-    'Java · React · Next.js · Python · AWS',
+    'From cloud infrastructure to polished interfaces.',
+    'Reliable releases. Faster systems. Better experiences.',
+    'AWS · Kubernetes · Java · Next.js · Python',
   ],
-  bio: "Full-stack and AI engineer with experience spanning enterprise (Honeywell, UPS), university research and platform work (Virginia Tech), and product-focused builds (AI try-on kiosks, fraud detection). Comfortable across the stack — Java/Spring Boot, TypeScript, React, Next.js, Python on the front, AWS, Kubernetes, Jenkins, MongoDB, PostgreSQL, Couchbase on the back — and equally at home shipping CI/CD pipelines, hardening security, or integrating generative AI. Treats Claude Code, MCP servers, and agent harnesses as everyday engineering tools.",
+  bio: 'Cloud and full stack engineer who builds reliable systems from infrastructure to interface. At Virginia Tech I delivered serverless AWS services; at UPS I improved release pipelines, query performance, and disaster recovery; at Honeywell I strengthened testing and delivery. I also build AI-powered products, including real-time fraud monitoring and a computer vision retail kiosk.',
   publications: [
     {
       citation:
@@ -22,11 +22,11 @@ export const profile = {
       link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4271767',
     },
   ],
-  contact: { email: 'akhileshbabut24@vt.edu' },
+  contact: { email: 'akhileshtumati24@gmail.com', phone: '5712380184' },
   links: {
     linkedin: 'https://www.linkedin.com/in/akhilesh-babu-tumati',
     github: 'https://github.com/AkhileshBabuT',
     handshake: 'https://vt.joinhandshake.com/profiles/akhileshbabu',
-    resumePdf: `${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/assets/resume/Akhil_resume.pdf`,
+    resumePdf: `${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/assets/resume/Resume_akhileshtumati.pdf`,
   },
 };

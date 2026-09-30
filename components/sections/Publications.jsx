@@ -1,6 +1,7 @@
 'use client';
-import { FiExternalLink, FiFileText } from 'react-icons/fi';
+import { FiExternalLink, FiFileText, FiAward } from 'react-icons/fi';
 import { profile } from '@/components/data/profile';
+import { certifications } from '@/components/data/certifications';
 import { HoverPanel } from '@/components/hud/HoverPanel';
 import { SectionTag } from '@/components/hud/SectionTag';
 import { Reveal, RevealGroup, RevealItem } from '@/components/hud/Reveal';
@@ -11,9 +12,24 @@ export default function Publications() {
       <div className="container mx-auto max-w-4xl">
         <Reveal>
           <div id="publications-heading">
-            <SectionTag number="05" label="Research" color="magenta" />
+            <SectionTag number="05" label="Credentials & Research" color="magenta" />
           </div>
         </Reveal>
+
+        <div className="mb-8 grid gap-4">
+          {certifications.map((cert) => (
+            <Reveal key={cert.name} scale>
+              <HoverPanel color="magenta" className="flex flex-wrap items-center gap-4 p-6">
+                <span className="clip-hud-sm border border-magenta/40 bg-magenta/10 p-3 text-magenta"><FiAward className="text-2xl" aria-hidden="true" /></span>
+                <div className="min-w-0 flex-1">
+                  <p className="font-display text-[10px] uppercase tracking-[0.18em] text-magenta">Certification / {cert.issuer}</p>
+                  <h3 className="mt-1 font-display text-sm font-bold uppercase leading-relaxed tracking-[0.08em] text-text">{cert.name}</h3>
+                </div>
+                <p className="font-primary text-xs text-text-dim">Issued {cert.issued} · Expires {cert.expires}</p>
+              </HoverPanel>
+            </Reveal>
+          ))}
+        </div>
 
         <RevealGroup
           as="div"
