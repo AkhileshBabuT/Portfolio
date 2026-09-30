@@ -1,32 +1,32 @@
 export const skillGroups = [
   {
-    category: 'Cloud Infrastructure',
+    category: 'Cloud',
     code: 'CLOUD_01',
-    skills: ['AWS Lambda', 'API Gateway', 'S3', 'CloudFront', 'CloudFormation', 'AWS CDK', 'IAM', 'VPC', 'Security Groups', 'Route 53', 'CloudWatch', 'Azure Cloud Services'],
+    technologies: ['AWS', 'Azure'],
   },
   {
-    category: 'DevOps / CI/CD',
+    category: 'DevOps',
     code: 'OPS_02',
-    skills: ['GitLab CI/CD', 'Jenkins', 'Docker', 'Kubernetes (EKS)', 'OpenShift', 'Promotion Gates', 'Environment Provisioning', 'Release Engineering'],
+    technologies: ['GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'OpenShift', 'Apache Kafka'],
   },
   {
-    category: 'Programming',
+    category: 'Languages',
     code: 'CODE_03',
-    skills: ['Python', 'Bash', 'PowerShell', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'C# / .NET Architecture'],
+    technologies: ['Python', 'Java', 'TypeScript', 'JavaScript', 'Bash', 'PowerShell', '.NET'],
   },
   {
-    category: 'Data / Storage',
+    category: 'Data',
     code: 'DATA_04',
-    skills: ['PostgreSQL', 'Supabase', 'MongoDB Atlas', 'Couchbase', 'AWS S3', 'DynamoDB', 'CockroachDB', 'Data Migrations', 'Redis'],
+    technologies: ['PostgreSQL', 'Supabase', 'MongoDB', 'Couchbase', 'Redis'],
   },
   {
-    category: 'Quality / Security',
-    code: 'SEC_05',
-    skills: ['SAST', 'SCA', 'Black Duck', 'Coverity', 'SonarQube', 'Jest', 'Supertest', 'Selenium', 'Katalon', 'TDD / BDD', 'High Availability', 'Disaster Recovery'],
+    category: 'Applications / AI',
+    code: 'APP_05',
+    technologies: ['React', 'Next.js', 'Spring Boot', 'Prisma', 'LangChain'],
   },
   {
-    category: 'Distributed Systems / AI',
-    code: 'SYS_06',
-    skills: ['Microservices', 'Apache Kafka', 'Red Hat AMQ Streams', 'MirrorMaker', 'RAG Systems', 'LangChain'],
+    category: 'Testing / Security',
+    code: 'SEC_06',
+    technologies: ['SonarQube', 'Jest', 'Selenium'],
   },
 ];
